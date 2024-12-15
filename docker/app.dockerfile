@@ -2,6 +2,7 @@ FROM php:8.3.13-fpm
 
 RUN apt-get update && apt-get install -y  \
     libfreetype6-dev \
+    git \
     libjpeg-dev \
     libpng-dev \
     libwebp-dev \

@@ -45,6 +45,11 @@ docker-compose exec app php artisan key:generate
 docker-compose exec app php artisan migrate --seed
 ```
 
+### 7. Generate docs and access them on /docs route
+```bash
+docker-compose exec app php artisan scribe:generate
+```
+
 ## Features
 - User authentication
 - Podcast browsing
