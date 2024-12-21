@@ -58,4 +58,9 @@ class Podcast extends Model
     {
         return $this->hasMany(Episode::class);
     }
+
+    public function savedByUsers(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'saved_podcasts');
+    }
 }

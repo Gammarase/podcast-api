@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class PodcastResource extends JsonResource
 {
@@ -16,14 +17,13 @@ class PodcastResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-            'image_url' => $this->image_url,
+            'image_url' => $this->image_url ? Storage::disk('public')->url($this->image_url) : null,
             'language' => $this->language,
             'featured' => $this->featured,
-            'admin_id' => $this->admin_id,
-            'category_id' => $this->category_id,
             'category' => CategoryResource::make($this->whenLoaded('category')),
-            'topics' => TopicCollection::make($this->whenLoaded('topics')),
-            'episodes' => EpisodeCollection::make($this->whenLoaded('episodes')),
+            'topics' => TopicResource::collection($this->whenLoaded('topics')),
+            'episodes' => EpisodeResource::collection($this->whenLoaded('episodes')),
+            'author' => UserResource::make($this->whenLoaded('admin')),
         ];
     }
 }

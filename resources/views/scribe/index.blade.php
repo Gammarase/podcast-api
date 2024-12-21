@@ -401,11 +401,11 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-endpoints-GETapi-podcasts--podcast-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/podcasts/{podcast}">
+                                             id="toc-item-endpoints-GETapi-podcasts--podcast_id-">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/podcasts/{podcast_id}">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#endpoints-GETapi-podcasts--podcast-">
-                                                    GET api/podcasts/{podcast}
+                                                   href="#endpoints-GETapi-podcasts--podcast_id-">
+                                                    GET api/podcasts/{podcast_id}
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -413,11 +413,11 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-endpoints-GETapi-podcasts--podcast--add-to-saved">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/podcasts/{podcast}/add-to-saved">
+                                             id="toc-item-endpoints-GETapi-podcasts--podcast_id--add-to-saved">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/podcasts/{podcast_id}/add-to-saved">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#endpoints-GETapi-podcasts--podcast--add-to-saved">
-                                                    GET api/podcasts/{podcast}/add-to-saved
+                                                   href="#endpoints-GETapi-podcasts--podcast_id--add-to-saved">
+                                                    GET api/podcasts/{podcast_id}/add-to-saved
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -582,7 +582,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        tkertzmann@example.org
+                        sophia.white@example.net
                     </div>
                 </div>
             </div>
@@ -606,7 +606,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        :P`[F=z\&amp;DK:*3s
+                        &lt;4h(E,D=zZr:V&amp;Kl|;^
                     </div>
                 </div>
             </div>
@@ -700,8 +700,8 @@ You can switch the language used with the tabs at the top right (or from the nav
                                      id="json-body-POSTapi-auth-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "tkertzmann@example.org",
-    "password": ":P`[F=z\\&DK:*3s"
+    "email": "sophia.white@example.net",
+    "password": "<4h(E,D=zZr:V&Kl|;^"
 }</div>
                             </div>
                                             </div>
@@ -797,8 +797,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"tkertzmann@example.org\",
-    \"password\": \":P`[F=z\\\\&amp;DK:*3s\"
+    \"email\": \"sophia.white@example.net\",
+    \"password\": \"&lt;4h(E,D=zZr:V&amp;Kl|;^\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -817,8 +817,8 @@ const headers = {
 };
 
 let body = {
-    "email": "tkertzmann@example.org",
-    "password": ":P`[F=z\\&amp;DK:*3s"
+    "email": "sophia.white@example.net",
+    "password": "&lt;4h(E,D=zZr:V&amp;Kl|;^"
 };
 
 fetch(url, {
@@ -939,7 +939,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        alek.toy@example.net
+                        dibbert.kenneth@example.com
                     </div>
                 </div>
             </div>
@@ -963,7 +963,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        aut
+                        temporibus
                     </div>
                 </div>
             </div>
@@ -990,7 +990,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        DA)wl&amp;Yqd^mu
+                        r\Ha}}t&amp;aNGAAwbs}4r4
                     </div>
                 </div>
             </div>
@@ -1084,9 +1084,9 @@ fetch(url, {
                                      id="json-body-POSTapi-auth-register"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "alek.toy@example.net",
-    "username": "aut",
-    "password": "DA)wl&Yqd^mu"
+    "email": "dibbert.kenneth@example.com",
+    "username": "temporibus",
+    "password": "r\\Ha}}t&aNGAAwbs}4r4"
 }</div>
                             </div>
                                             </div>
@@ -1182,9 +1182,9 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"alek.toy@example.net\",
-    \"username\": \"aut\",
-    \"password\": \"DA)wl&amp;Yqd^mu\"
+    \"email\": \"dibbert.kenneth@example.com\",
+    \"username\": \"temporibus\",
+    \"password\": \"r\\\\Ha}}t&amp;aNGAAwbs}4r4\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -1203,9 +1203,9 @@ const headers = {
 };
 
 let body = {
-    "email": "alek.toy@example.net",
-    "username": "aut",
-    "password": "DA)wl&amp;Yqd^mu"
+    "email": "dibbert.kenneth@example.com",
+    "username": "temporibus",
+    "password": "r\\Ha}}t&amp;aNGAAwbs}4r4"
 };
 
 fetch(url, {
@@ -1648,7 +1648,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        wferry@example.org
+                        herzog.reagan@example.net
                     </div>
                 </div>
             </div>
@@ -1670,7 +1670,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        aut
+                        dolore
                     </div>
                 </div>
             </div>
@@ -1695,7 +1695,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Oh=UV=r[W
+                        &lt;,Y*r7&quot;N+m*1.&gt;iYn*
                     </div>
                 </div>
             </div>
@@ -1720,7 +1720,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpybohOe
+                        /tmp/phpp0hyeo
                     </div>
                 </div>
             </div>
@@ -1818,7 +1818,7 @@ fetch(url, {
                                                                                             <input aria-label="email" name="email"
                                                        id="bodyparam-POSTapi-auth-update-user-email"
                                                        placeholder="Must be a valid email address."
-                                                       value="wferry@example.org" data-component="body"
+                                                       value="herzog.reagan@example.net" data-component="body"
                                                        class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                                 >
                                                                                     </div>
@@ -1831,7 +1831,7 @@ fetch(url, {
                                                                                             <input aria-label="username" name="username"
                                                        id="bodyparam-POSTapi-auth-update-user-username"
                                                        placeholder=""
-                                                       value="aut" data-component="body"
+                                                       value="dolore" data-component="body"
                                                        class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                                 >
                                                                                     </div>
@@ -1844,7 +1844,7 @@ fetch(url, {
                                                                                             <input aria-label="password" name="password"
                                                        id="bodyparam-POSTapi-auth-update-user-password"
                                                        placeholder="Must be at least 8 characters."
-                                                       value="Oh=UV=r[W" data-component="body"
+                                                       value="&lt;,Y*r7&quot;N+m*1.&gt;iYn*" data-component="body"
                                                        class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                                 >
                                                                                     </div>
@@ -1954,10 +1954,10 @@ You can check the Dev Tools console for debugging information.</p>
     "http://localhost/api/auth/update-user" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "email=wferry@example.org"\
-    --form "username=aut"\
-    --form "password=Oh=UV=r[W"\
-    --form "image=@/tmp/phpybohOe" </code></pre>                                        </div>
+    --form "email=herzog.reagan@example.net"\
+    --form "username=dolore"\
+    --form "password=&lt;,Y*r7"N+m*1.&gt;iYn*"\
+    --form "image=@/tmp/phpp0hyeo" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -1974,9 +1974,9 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('email', 'wferry@example.org');
-body.append('username', 'aut');
-body.append('password', 'Oh=UV=r[W');
+body.append('email', 'herzog.reagan@example.net');
+body.append('username', 'dolore');
+body.append('password', '&lt;,Y*r7"N+m*1.&gt;iYn*');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -2097,7 +2097,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        f
+                        p
                     </div>
                 </div>
             </div>
@@ -2124,7 +2124,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        iklhkyicy
+                        iaj
                     </div>
                 </div>
             </div>
@@ -2175,7 +2175,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        neque
+                        rerum
                     </div>
                 </div>
             </div>
@@ -2269,10 +2269,10 @@ fetch(url, {
                                      id="json-body-POSTapi-auth-purchase-premium"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "cvv": "f",
-    "card_number": "iklhkyicy",
+    "cvv": "p",
+    "card_number": "iaj",
     "expiration_date": "12\/24",
-    "card_holder": "neque"
+    "card_holder": "rerum"
 }</div>
                             </div>
                                             </div>
@@ -2368,10 +2368,10 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"cvv\": \"f\",
-    \"card_number\": \"iklhkyicy\",
+    \"cvv\": \"p\",
+    \"card_number\": \"iaj\",
     \"expiration_date\": \"12\\/24\",
-    \"card_holder\": \"neque\"
+    \"card_holder\": \"rerum\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -2390,10 +2390,10 @@ const headers = {
 };
 
 let body = {
-    "cvv": "f",
-    "card_number": "iklhkyicy",
+    "cvv": "p",
+    "card_number": "iaj",
     "expiration_date": "12\/24",
-    "card_holder": "neque"
+    "card_holder": "rerum"
 };
 
 fetch(url, {
@@ -3062,14 +3062,14 @@ fetch(url, {
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="endpoints-GETapi-podcasts--podcast-">
-                    GET api/podcasts/{podcast}
+                    id="endpoints-GETapi-podcasts--podcast_id-">
+                    GET api/podcasts/{podcast_id}
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://localhost/api/podcasts/{podcast}"
+            <div title="http://localhost/api/podcasts/{podcast_id}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3080,7 +3080,7 @@ fetch(url, {
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/podcasts/{podcast}</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/podcasts/{podcast_id}</div>
                     </div>
 
                                     </div>
@@ -3145,20 +3145,20 @@ fetch(url, {
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">podcast</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">podcast_id</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
                                     <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
                     <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The podcast.</p>
+            <p>The ID of the podcast.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        1
                     </div>
                 </div>
             </div>
@@ -3181,7 +3181,7 @@ fetch(url, {
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="GET"
-              data-path="api/podcasts/{podcast}"
+              data-path="api/podcasts/{podcast_id}"
               data-hasfiles="0"
               data-hasjsonbody="0">
             
@@ -3204,23 +3204,23 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-podcasts--podcast--Content-Type">Content-Type</label>
+                                       for="header-GETapi-podcasts--podcast_id--Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-GETapi-podcasts--podcast--Content-Type"
+                                               id="header-GETapi-podcasts--podcast_id--Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-podcasts--podcast--Accept">Accept</label>
+                                       for="header-GETapi-podcasts--podcast_id--Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-GETapi-podcasts--podcast--Accept"
+                                               id="header-GETapi-podcasts--podcast_id--Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -3248,14 +3248,14 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                             <label aria-hidden="true"
-                                       for="urlparam-GETapi-podcasts--podcast--podcast">podcast</label>
+                                       for="urlparam-GETapi-podcasts--podcast_id--podcast_id">podcast_id</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="podcast" name="podcast"
-                                               id="urlparam-GETapi-podcasts--podcast--podcast"
-                                               placeholder="The podcast."
-                                               value="et" data-component="url"
+                                        <input aria-label="podcast_id" name="podcast_id"
+                                               id="urlparam-GETapi-podcasts--podcast_id--podcast_id"
+                                               placeholder="The ID of the podcast."
+                                               value="1" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3267,7 +3267,7 @@ fetch(url, {
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="GETapi-podcasts--podcast-"
+                    <button type="button" data-endpoint="GETapi-podcasts--podcast_id-"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -3275,7 +3275,7 @@ fetch(url, {
                 </div>
             </div>
 
-            <div data-endpoint="GETapi-podcasts--podcast-"
+            <div data-endpoint="GETapi-podcasts--podcast_id-"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -3302,7 +3302,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="GETapi-podcasts--podcast-"
+                <div data-endpoint="GETapi-podcasts--podcast_id-"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -3351,7 +3351,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/podcasts/et" \
+    --get "http://localhost/api/podcasts/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -3361,7 +3361,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/podcasts/et"
+    "http://localhost/api/podcasts/1"
 );
 
 const headers = {
@@ -3385,9 +3385,9 @@ fetch(url, {
                                             <div class="sl-mb-2 sl-inline-block">Example response:</div>
                                             <div class="sl-mb-2 sl-inline-block">
                                                 <select
-                                                        class="example-response-GETapi-podcasts--podcast--toggle sl-text-base"
+                                                        class="example-response-GETapi-podcasts--podcast_id--toggle sl-text-base"
                                                         aria-label="Response sample"
-                                                        onchange="switchExampleResponse('GETapi-podcasts--podcast-', event.target.value);">
+                                                        onchange="switchExampleResponse('GETapi-podcasts--podcast_id-', event.target.value);">
                                                                                                             <option value="0">401</option>
                                                                                                     </select></div>
                                         </div>
@@ -3405,7 +3405,7 @@ fetch(url, {
                                     </div>
                                 </button>
                             </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-podcasts--podcast- example-response-GETapi-podcasts--podcast--0"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-podcasts--podcast_id- example-response-GETapi-podcasts--podcast_id--0"
                                      style=" "
                                 >
                                     <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
@@ -3449,14 +3449,14 @@ fetch(url, {
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="endpoints-GETapi-podcasts--podcast--add-to-saved">
-                    GET api/podcasts/{podcast}/add-to-saved
+                    id="endpoints-GETapi-podcasts--podcast_id--add-to-saved">
+                    GET api/podcasts/{podcast_id}/add-to-saved
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://localhost/api/podcasts/{podcast}/add-to-saved"
+            <div title="http://localhost/api/podcasts/{podcast_id}/add-to-saved"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3467,7 +3467,7 @@ fetch(url, {
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/podcasts/{podcast}/add-to-saved</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/podcasts/{podcast_id}/add-to-saved</div>
                     </div>
 
                                     </div>
@@ -3532,20 +3532,20 @@ fetch(url, {
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">podcast</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">podcast_id</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
                                     <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
                     <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The podcast.</p>
+            <p>The ID of the podcast.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        mollitia
+                        1
                     </div>
                 </div>
             </div>
@@ -3556,188 +3556,6 @@ fetch(url, {
                     
 
                     
-                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
-
-                                <div class="sl-text-sm">
-                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">title</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        veritatis
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">description</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Et qui et rerum earum officiis omnis.
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">image_url</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        http://www.nicolas.com/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">language</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                            Must be one of:
-            <ul style="list-style-position: inside; list-style-type: square;"><li><code>ua</code></li> <li><code>en</code></li> <li><code>es</code></li> <li><code>fr</code></li> <li><code>de</code></li> <li><code>it</code></li> <li><code>zh</code></li> <li><code>ja</code></li> <li><code>ko</code></li></ul>
-                                    <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        it
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">featured</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        similique
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">admin_id</div>
-                                            <span class="sl-truncate sl-text-muted">integer</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the admins table.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        15
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">category_id</div>
-                                            <span class="sl-truncate sl-text-muted">integer</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the categories table.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        14
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-                            </div>
-                        </div>
                     
                                     </div>
             </div>
@@ -3750,9 +3568,9 @@ fetch(url, {
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="GET"
-              data-path="api/podcasts/{podcast}/add-to-saved"
+              data-path="api/podcasts/{podcast_id}/add-to-saved"
               data-hasfiles="0"
-              data-hasjsonbody="1">
+              data-hasjsonbody="0">
             
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
@@ -3773,23 +3591,23 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-podcasts--podcast--add-to-saved-Content-Type">Content-Type</label>
+                                       for="header-GETapi-podcasts--podcast_id--add-to-saved-Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-GETapi-podcasts--podcast--add-to-saved-Content-Type"
+                                               id="header-GETapi-podcasts--podcast_id--add-to-saved-Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-podcasts--podcast--add-to-saved-Accept">Accept</label>
+                                       for="header-GETapi-podcasts--podcast_id--add-to-saved-Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-GETapi-podcasts--podcast--add-to-saved-Accept"
+                                               id="header-GETapi-podcasts--podcast_id--add-to-saved-Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -3817,14 +3635,14 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                             <label aria-hidden="true"
-                                       for="urlparam-GETapi-podcasts--podcast--add-to-saved-podcast">podcast</label>
+                                       for="urlparam-GETapi-podcasts--podcast_id--add-to-saved-podcast_id">podcast_id</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="podcast" name="podcast"
-                                               id="urlparam-GETapi-podcasts--podcast--add-to-saved-podcast"
-                                               placeholder="The podcast."
-                                               value="mollitia" data-component="url"
+                                        <input aria-label="podcast_id" name="podcast_id"
+                                               id="urlparam-GETapi-podcasts--podcast_id--add-to-saved-podcast_id"
+                                               placeholder="The ID of the podcast."
+                                               value="1" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3833,43 +3651,10 @@ fetch(url, {
                 </div>
             
             
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Body
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-GETapi-podcasts--podcast--add-to-saved"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "title": "veritatis",
-    "description": "Et qui et rerum earum officiis omnis.",
-    "image_url": "http:\/\/www.nicolas.com\/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi",
-    "language": "it",
-    "featured": "similique",
-    "admin_id": 15,
-    "category_id": 14
-}</div>
-                            </div>
-                                            </div>
-                </div>
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="GETapi-podcasts--podcast--add-to-saved"
+                    <button type="button" data-endpoint="GETapi-podcasts--podcast_id--add-to-saved"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -3877,7 +3662,7 @@ fetch(url, {
                 </div>
             </div>
 
-            <div data-endpoint="GETapi-podcasts--podcast--add-to-saved"
+            <div data-endpoint="GETapi-podcasts--podcast_id--add-to-saved"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -3904,7 +3689,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="GETapi-podcasts--podcast--add-to-saved"
+                <div data-endpoint="GETapi-podcasts--podcast_id--add-to-saved"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -3953,19 +3738,9 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/podcasts/mollitia/add-to-saved" \
+    --get "http://localhost/api/podcasts/1/add-to-saved" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"title\": \"veritatis\",
-    \"description\": \"Et qui et rerum earum officiis omnis.\",
-    \"image_url\": \"http:\\/\\/www.nicolas.com\\/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi\",
-    \"language\": \"it\",
-    \"featured\": \"similique\",
-    \"admin_id\": 15,
-    \"category_id\": 14
-}"
-</code></pre>                                        </div>
+    --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -3973,7 +3748,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/podcasts/mollitia/add-to-saved"
+    "http://localhost/api/podcasts/1/add-to-saved"
 );
 
 const headers = {
@@ -3981,20 +3756,9 @@ const headers = {
     "Accept": "application/json",
 };
 
-let body = {
-    "title": "veritatis",
-    "description": "Et qui et rerum earum officiis omnis.",
-    "image_url": "http:\/\/www.nicolas.com\/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi",
-    "language": "it",
-    "featured": "similique",
-    "admin_id": 15,
-    "category_id": 14
-};
-
 fetch(url, {
     method: "GET",
     headers,
-    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -4008,9 +3772,9 @@ fetch(url, {
                                             <div class="sl-mb-2 sl-inline-block">Example response:</div>
                                             <div class="sl-mb-2 sl-inline-block">
                                                 <select
-                                                        class="example-response-GETapi-podcasts--podcast--add-to-saved-toggle sl-text-base"
+                                                        class="example-response-GETapi-podcasts--podcast_id--add-to-saved-toggle sl-text-base"
                                                         aria-label="Response sample"
-                                                        onchange="switchExampleResponse('GETapi-podcasts--podcast--add-to-saved', event.target.value);">
+                                                        onchange="switchExampleResponse('GETapi-podcasts--podcast_id--add-to-saved', event.target.value);">
                                                                                                             <option value="0">401</option>
                                                                                                     </select></div>
                                         </div>
@@ -4028,7 +3792,7 @@ fetch(url, {
                                     </div>
                                 </button>
                             </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-podcasts--podcast--add-to-saved example-response-GETapi-podcasts--podcast--add-to-saved-0"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-podcasts--podcast_id--add-to-saved example-response-GETapi-podcasts--podcast_id--add-to-saved-0"
                                      style=" "
                                 >
                                     <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">

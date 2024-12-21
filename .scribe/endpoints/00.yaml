@@ -26,7 +26,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: tkertzmann@example.org
+        example: sophia.white@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -36,15 +36,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ':P`[F=z\&DK:*3s'
+        example: '<4h(E,D=zZr:V&Kl|;^'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: tkertzmann@example.org
-      password: ':P`[F=z\&DK:*3s'
+      email: sophia.white@example.net
+      password: '<4h(E,D=zZr:V&Kl|;^'
     fileParameters: []
     responses: []
     responseFields: []
@@ -78,7 +78,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: alek.toy@example.net
+        example: dibbert.kenneth@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,7 +88,7 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: aut
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,16 +98,16 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'DA)wl&Yqd^mu'
+        example: 'r\Ha}}t&aNGAAwbs}4r4'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: alek.toy@example.net
-      username: aut
-      password: 'DA)wl&Yqd^mu'
+      email: dibbert.kenneth@example.com
+      username: temporibus
+      password: 'r\Ha}}t&aNGAAwbs}4r4'
     fileParameters: []
     responses: []
     responseFields: []
@@ -180,7 +180,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: wferry@example.org
+        example: herzog.reagan@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -190,7 +190,7 @@ endpoints:
         name: username
         description: ''
         required: false
-        example: aut
+        example: dolore
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -200,7 +200,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: false
-        example: 'Oh=UV=r[W'
+        example: '<,Y*r7"N+m*1.>iYn*'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -217,9 +217,9 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: wferry@example.org
-      username: aut
-      password: 'Oh=UV=r[W'
+      email: herzog.reagan@example.net
+      username: dolore
+      password: '<,Y*r7"N+m*1.>iYn*'
     fileParameters:
       image: null
     responses: []
@@ -254,7 +254,7 @@ endpoints:
         name: cvv
         description: 'Must be at least 3 characters. Must not be greater than 3 characters.'
         required: true
-        example: f
+        example: p
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -264,7 +264,7 @@ endpoints:
         name: card_number
         description: 'Must be at least 16 characters. Must not be greater than 16 characters.'
         required: true
-        example: iklhkyicy
+        example: iaj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -284,17 +284,17 @@ endpoints:
         name: card_holder
         description: ''
         required: true
-        example: neque
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      cvv: f
-      card_number: iklhkyicy
+      cvv: p
+      card_number: iaj
       expiration_date: 12/24
-      card_holder: neque
+      card_holder: rerum
     fileParameters: []
     responses: []
     responseFields: []
@@ -384,7 +384,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/podcasts/{podcast}'
+    uri: 'api/podcasts/{podcast_id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -398,18 +398,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      podcast:
-        name: podcast
-        description: 'The podcast.'
+      podcast_id:
+        name: podcast_id
+        description: 'The ID of the podcast.'
         required: true
-        example: et
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      podcast: et
+      podcast_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -434,7 +434,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/podcasts/{podcast}/add-to-saved'
+    uri: 'api/podcasts/{podcast_id}/add-to-saved'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -448,108 +448,22 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      podcast:
-        name: podcast
-        description: 'The podcast.'
+      podcast_id:
+        name: podcast_id
+        description: 'The ID of the podcast.'
         required: true
-        example: mollitia
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      podcast: mollitia
+      podcast_id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      title:
-        name: title
-        description: ''
-        required: true
-        example: veritatis
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      description:
-        name: description
-        description: ''
-        required: true
-        example: 'Et qui et rerum earum officiis omnis.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      image_url:
-        name: image_url
-        description: ''
-        required: true
-        example: 'http://www.nicolas.com/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      language:
-        name: language
-        description: ''
-        required: true
-        example: it
-        type: string
-        enumValues:
-          - ua
-          - en
-          - es
-          - fr
-          - de
-          - it
-          - zh
-          - ja
-          - ko
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      featured:
-        name: featured
-        description: ''
-        required: true
-        example: similique
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      admin_id:
-        name: admin_id
-        description: 'The <code>id</code> of an existing record in the admins table.'
-        required: true
-        example: 15
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      category_id:
-        name: category_id
-        description: 'The <code>id</code> of an existing record in the categories table.'
-        required: true
-        example: 14
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanBodyParameters:
-      title: veritatis
-      description: 'Et qui et rerum earum officiis omnis.'
-      image_url: 'http://www.nicolas.com/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi'
-      language: it
-      featured: similique
-      admin_id: 15
-      category_id: 14
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -

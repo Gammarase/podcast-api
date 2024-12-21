@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Category;
 use App\Models\Podcast;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PodcastFactory extends Factory
 {
@@ -24,7 +25,7 @@ class PodcastFactory extends Factory
         return [
             'title' => $this->faker->sentence(4),
             'description' => $this->faker->text(),
-            'image_url' => $this->faker->word(),
+            'image_url' => Str::after($this->faker->image(storage_path('app/public/podcasts')), 'app/public/'),
             'language' => $this->faker->randomElement(['ua', 'en', 'es', 'fr', 'de', 'it', 'zh', 'ja', 'ko']),
             'featured' => $this->faker->boolean(),
             'admin_id' => Admin::factory(),
