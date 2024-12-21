@@ -44,5 +44,15 @@ class AuthController extends Controller
         return AppResponse::success(new UserResource($user));
     }
 
-    public function purchasePremium(AuthPurchasePremiumRequest $request): JsonResponse {}
+    public function purchasePremium(AuthPurchasePremiumRequest $request): JsonResponse
+    {
+        abort_if($request->user()->havePremium, 400, 'You already have premium');
+
+        // Simulate payment failure
+        abort_if($request->card_number === '4242424242424242', 400, 'Payment failed');
+
+        $this->authService->purchasePremium($request);
+
+        return AppResponse::success(['message' => 'Premium purchased successfully']);
+    }
 }

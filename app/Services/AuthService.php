@@ -8,6 +8,7 @@ use App\Http\Requests\AuthRegisterRequest;
 use App\Http\Requests\AuthUpdateUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class AuthService extends AbstractService
 {
@@ -15,9 +16,9 @@ class AuthService extends AbstractService
     {
         $credentials = $request->only('email', 'password');
 
-        $user = User::where('email', $credentials['email'])->firstOrFail();
+        $user = User::where('email', $credentials['email'])->first();
 
-        if (! Hash::check($credentials['password'], $user->password)) {
+        if (! $user || ! Hash::check($credentials['password'], $user->password)) {
             abort(401, 'Invalid credentials');
         }
 
@@ -41,7 +42,14 @@ class AuthService extends AbstractService
     {
         $user = $request->user();
 
-        $user->update($request->validated());
+        $data = array_filter($request->validated());
+
+        if (isset($data['image'])) {
+            $user->image_url ? Storage::disk('public')->delete($user->image_url) : null;
+            $data['image_url'] = $data['image']->storeAs('images', "photo_{$user->id}.".$data['image']->extension(), 'public');
+        }
+
+        $user->update($data);
 
         return $user;
     }

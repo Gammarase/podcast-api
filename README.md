@@ -44,8 +44,12 @@ docker-compose exec app php artisan key:generate
 ```bash
 docker-compose exec app php artisan migrate --seed
 ```
+### 7. Link storage to use saved files by url
+```bash
+docker-compose exec app php artisan storage:link
 
-### 7. Generate docs and access them on /docs route
+```
+### 8. Generate docs and access them on /docs route
 ```bash
 docker-compose exec app php artisan scribe:generate
 ```

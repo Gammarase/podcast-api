@@ -20,10 +20,10 @@ class AuthUpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => 'nulable|email|unique:users',
-            'username' => 'nulable|string|unique:users',
-            'password' => 'nulable|string|min:8',
-            'image' => 'nulable|image',
+            'email' => 'nullable|email|unique:users',
+            'username' => 'nullable|string|unique:users',
+            'password' => 'nullable|string|min:8',
+            'image' => 'image',
         ];
     }
 }

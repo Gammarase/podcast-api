@@ -47,7 +47,7 @@ class User extends Authenticatable
     public function havePremium(): Attribute
     {
         return new Attribute(get: function () {
-            return $this->premium_until && $this->premium_until > now();
+            return $this->premium_until && now()->timestamp < $this->premium_until;
         });
     }
 

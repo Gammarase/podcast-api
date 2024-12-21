@@ -20,8 +20,8 @@ class AuthPurchasePremiumRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'cvv' => ['required', 'min:3', 'max:4', 'integer'],
-            'card_number' => ['required', 'integer', 'min:16', 'max:16'],
+            'cvv' => ['required', 'min:3', 'max:3', 'string'],
+            'card_number' => ['required', 'string', 'min:16', 'max:16'],
             'expiration_date' => ['required', 'date_format:m/y'],
             'card_holder' => ['required', 'string'],
         ];

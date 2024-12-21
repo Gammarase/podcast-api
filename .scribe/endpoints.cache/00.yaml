@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: bonita58@example.com
+        example: tkertzmann@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -38,15 +38,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '~{-)"r0\|M'
+        example: ':P`[F=z\&DK:*3s'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: bonita58@example.com
-      password: '~{-)"r0\|M'
+      email: tkertzmann@example.org
+      password: ':P`[F=z\&DK:*3s'
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,7 +80,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: sbeahan@example.net
+        example: alek.toy@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -90,7 +90,7 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: voluptatem
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,16 +100,16 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'M"ad{AzO1+SHQ'
+        example: 'DA)wl&Yqd^mu'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: sbeahan@example.net
-      username: voluptatem
-      password: 'M"ad{AzO1+SHQ'
+      email: alek.toy@example.net
+      username: aut
+      password: 'DA)wl&Yqd^mu'
     fileParameters: []
     responses: []
     responseFields: []
@@ -159,7 +159,7 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - PATCH
+      - POST
     uri: api/auth/update-user
     metadata:
       groupName: Endpoints
@@ -182,31 +182,31 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: brice.mohr@example.com
+        example: wferry@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
+        nullable: true
         custom: []
       username:
         name: username
         description: ''
         required: false
-        example: nostrum
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
+        nullable: true
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: false
-        example: ud!nM)
+        example: 'Oh=UV=r[W'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
+        nullable: true
         custom: []
       image:
         name: image
@@ -219,9 +219,9 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: brice.mohr@example.com
-      username: nostrum
-      password: ud!nM)
+      email: wferry@example.org
+      username: aut
+      password: 'Oh=UV=r[W'
     fileParameters:
       image: null
     responses: []
@@ -254,20 +254,20 @@ endpoints:
     bodyParameters:
       cvv:
         name: cvv
-        description: 'Must be at least 3. Must not be greater than 4.'
+        description: 'Must be at least 3 characters. Must not be greater than 3 characters.'
         required: true
-        example: 3
-        type: integer
+        example: f
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       card_number:
         name: card_number
-        description: 'Must be at least 16. Must not be greater than 16.'
+        description: 'Must be at least 16 characters. Must not be greater than 16 characters.'
         required: true
-        example: 5
-        type: integer
+        example: iklhkyicy
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -286,19 +286,283 @@ endpoints:
         name: card_holder
         description: ''
         required: true
-        example: aut
+        example: neque
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      cvv: 3
-      card_number: 5
+      cvv: f
+      card_number: iklhkyicy
       expiration_date: 12/24
-      card_holder: aut
+      card_holder: neque
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/podcasts/get-featured
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/podcasts/get-popular
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/podcasts/{podcast}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      podcast:
+        name: podcast
+        description: 'The podcast.'
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      podcast: et
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/podcasts/{podcast}/add-to-saved'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      podcast:
+        name: podcast
+        description: 'The podcast.'
+        required: true
+        example: mollitia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      podcast: mollitia
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: veritatis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Et qui et rerum earum officiis omnis.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      image_url:
+        name: image_url
+        description: ''
+        required: true
+        example: 'http://www.nicolas.com/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      language:
+        name: language
+        description: ''
+        required: true
+        example: it
+        type: string
+        enumValues:
+          - ua
+          - en
+          - es
+          - fr
+          - de
+          - it
+          - zh
+          - ja
+          - ko
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      featured:
+        name: featured
+        description: ''
+        required: true
+        example: similique
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      admin_id:
+        name: admin_id
+        description: 'The <code>id</code> of an existing record in the admins table.'
+        required: true
+        example: 15
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      category_id:
+        name: category_id
+        description: 'The <code>id</code> of an existing record in the categories table.'
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      title: veritatis
+      description: 'Et qui et rerum earum officiis omnis.'
+      image_url: 'http://www.nicolas.com/deleniti-nobis-quo-ratione-fugiat-ut-iusto-sequi'
+      language: it
+      featured: similique
+      admin_id: 15
+      category_id: 14
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
