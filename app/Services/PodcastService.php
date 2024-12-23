@@ -10,25 +10,43 @@ class PodcastService extends AbstractService
 {
     public function getFeatured(?int $seed = null): LengthAwarePaginator
     {
+        $user = auth()->user();
         $seed = $seed ?? now()->hour;
 
-        return Podcast::where('featured', true)->orderByRaw("RAND($seed)")->paginate(20);
+        return Podcast::where('featured', true)
+            ->with('admin')
+            ->withExists(['savedByUsers as is_saved' => function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            }])
+            ->orderByRaw("RAND($seed)")
+            ->paginate(20);
     }
 
     public function getPopular(): LengthAwarePaginator
     {
+        $user = auth()->user();
+
         return Podcast::withCount('savedByUsers')
+            ->with('admin')
+            ->withExists(['savedByUsers as is_saved' => function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            }])
             ->orderBy('saved_by_users_count', 'desc')
             ->paginate(20);
     }
 
     public function getDetailed(Podcast $podcast): Podcast
     {
-        return $podcast->load('episodes', 'topics', 'category', 'admin');
+        $user = auth()->user();
+
+        return $podcast->load('episodes', 'topics', 'category', 'admin')
+            ->loadExists(['savedByUsers as is_saved' => function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            }]);
     }
 
     public function addToSaved(User $user, Podcast $podcast): void
     {
-        $user->savedPodcasts()->attach($podcast);
+        $user->savedPodcasts()->toggle($podcast);
     }
 }
