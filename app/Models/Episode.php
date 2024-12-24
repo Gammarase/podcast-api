@@ -19,6 +19,7 @@ class Episode extends Model
     protected $fillable = [
         'title',
         'description',
+        'image_url',
         'duration',
         'episode_number',
         'file_path',
@@ -56,5 +57,10 @@ class Episode extends Model
     public function guests(): BelongsToMany
     {
         return $this->belongsToMany(Guest::class);
+    }
+
+    public function likes(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'liked_episodes');
     }
 }

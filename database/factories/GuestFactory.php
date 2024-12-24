@@ -3,10 +3,13 @@
 namespace Database\Factories;
 
 use App\Models\Guest;
+use Database\Factories\Traits\HasFakeImages;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class GuestFactory extends Factory
 {
+    use HasFakeImages;
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -21,8 +24,8 @@ class GuestFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'job_title' => $this->faker->regexify('[A-Za-z0-9]{255}'),
-            'image_url' => $this->faker->word(),
+            'job_title' => $this->faker->jobTitle(),
+            'image_url' => $this->storeFakeImage(),
         ];
     }
 }

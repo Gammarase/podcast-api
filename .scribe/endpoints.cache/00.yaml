@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: sophia.white@example.net
+        example: buster08@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -38,15 +38,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '<4h(E,D=zZr:V&Kl|;^'
+        example: '@_f=1)_'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: sophia.white@example.net
-      password: '<4h(E,D=zZr:V&Kl|;^'
+      email: buster08@example.com
+      password: '@_f=1)_'
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,7 +80,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: dibbert.kenneth@example.com
+        example: lavern.pacocha@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -90,7 +90,7 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: temporibus
+        example: nihil
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,16 +100,16 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'r\Ha}}t&aNGAAwbs}4r4'
+        example: '3\Z_eRNqM73Rn")Ro$&U'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: dibbert.kenneth@example.com
-      username: temporibus
-      password: 'r\Ha}}t&aNGAAwbs}4r4'
+      email: lavern.pacocha@example.org
+      username: nihil
+      password: '3\Z_eRNqM73Rn")Ro$&U'
     fileParameters: []
     responses: []
     responseFields: []
@@ -182,7 +182,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: herzog.reagan@example.net
+        example: jack.white@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -192,7 +192,7 @@ endpoints:
         name: username
         description: ''
         required: false
-        example: dolore
+        example: iste
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -202,7 +202,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: false
-        example: '<,Y*r7"N+m*1.>iYn*'
+        example: 'eC@}\|t&)'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -219,9 +219,9 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: herzog.reagan@example.net
-      username: dolore
-      password: '<,Y*r7"N+m*1.>iYn*'
+      email: jack.white@example.org
+      username: iste
+      password: 'eC@}\|t&)'
     fileParameters:
       image: null
     responses: []
@@ -256,7 +256,7 @@ endpoints:
         name: cvv
         description: 'Must be at least 3 characters. Must not be greater than 3 characters.'
         required: true
-        example: p
+        example: bji
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -266,7 +266,7 @@ endpoints:
         name: card_number
         description: 'Must be at least 16 characters. Must not be greater than 16 characters.'
         required: true
-        example: iaj
+        example: forykjmda
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -286,17 +286,17 @@ endpoints:
         name: card_holder
         description: ''
         required: true
-        example: rerum
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      cvv: p
-      card_number: iaj
+      cvv: bji
+      card_number: forykjmda
       expiration_date: 12/24
-      card_holder: rerum
+      card_holder: quia
     fileParameters: []
     responses: []
     responseFields: []
@@ -462,6 +462,106 @@ endpoints:
         custom: []
     cleanUrlParameters:
       podcast_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/episodes/{episode_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      episode_id:
+        name: episode_id
+        description: 'The ID of the episode.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      episode_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/episodes/{episode_id}/like'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      episode_id:
+        name: episode_id
+        description: 'The ID of the episode.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      episode_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

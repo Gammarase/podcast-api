@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->string('image_url');
             $table->unsignedInteger('duration');
             $table->integer('episode_number');
             $table->string('file_path');

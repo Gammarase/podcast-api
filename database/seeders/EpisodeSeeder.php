@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Episode;
+use App\Models\Guest;
+use App\Models\Topic;
 use Illuminate\Database\Seeder;
 
 class EpisodeSeeder extends Seeder
@@ -12,6 +14,12 @@ class EpisodeSeeder extends Seeder
      */
     public function run(): void
     {
-        Episode::factory()->count(5)->create();
+        $episodes = Episode::factory()->count(15)->create();
+        foreach ($episodes as $episode) {
+            $guests = Guest::inRandomOrder()->limit(3)->pluck('id');
+            $topics = Topic::inRandomOrder()->limit(3)->pluck('id');
+            $episode->guests()->attach($guests);
+            $episode->topics()->attach($topics);
+        }
     }
 }

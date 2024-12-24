@@ -23,10 +23,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             CategorySeeder::class,
-            EpisodeSeeder::class,
             GuestSeeder::class,
             PodcastSeeder::class,
             TopicSeeder::class,
+            EpisodeSeeder::class,
         ]);
     }
 }

@@ -2,42 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\EpisodeGetEpisodesOfPodcastRequest;
-use App\Http\Requests\EpisodeGetNextEpisodesRequest;
-use App\Http\Requests\EpisodeLikeRequest;
 use App\Http\Resources\EpisodeCollection;
 use App\Http\Resources\EpisodeResource;
+use App\Http\Response as AppResponse;
 use App\Models\Episode;
+use App\Services\EpisodeService;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class EpisodeController extends Controller
 {
-    public function getEpisodesOfPodcast(EpisodeGetEpisodesOfPodcastRequest $request): EpisodeCollection
-    {
-        $episodes = Episode::paginate();
+    public function __construct(private EpisodeService $episodeService) {}
 
-        return new EpisodeCollection($Episodes);
+    public function seachEpisodes(Request $request): EpisodeCollection {}
+
+    public function getDetailed(Request $request, Episode $episode)
+    {
+        return AppResponse::success(new EpisodeResource(
+            $this->episodeService->getDetailed($episode)
+        ));
     }
 
-    public function getNextEpisodes(EpisodeGetNextEpisodesRequest $request): EpisodeCollection
+    public function like(Request $request, Episode $episode)
     {
-        $episodes = Episode::paginate();
+        $this->episodeService->like($episode, $request->user());
 
-        return new EpisodeCollection($Episodes);
+        return AppResponse::success([], AppResponse::HTTP_NO_CONTENT);
     }
-
-    public function seachEpisodes(Request $request): EpisodeCollection
-    {
-        $episodes = Episode::paginate();
-
-        return new EpisodeCollection($Episodes);
-    }
-
-    public function getDetailed(Request $request): EpisodeResource
-    {
-        return new EpisodeResource($Episode);
-    }
-
-    public function like(EpisodeLikeRequest $request): Response {}
 }

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-// use App\Http\Controllers\EpisodeController;
+use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\PodcastController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,12 +27,12 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('add-to-saved', [PodcastController::class, 'addToSaved']);
         });
     });
-    //
-    //     Route::prefix('episodes')->group(function () {
-    //         Route::get('get-episodes-of-podcast', [EpisodeController::class, 'getEpisodesOfPodcast']);
-    //         Route::get('get-next-episodes', [EpisodeController::class, 'getNextEpisodes']);
-    //         Route::get('seach-episodes', [EpisodeController::class, 'seachEpisodes']);
-    //         Route::get('get-detailed', [EpisodeController::class, 'getDetailed']);
-    //         Route::get('like', [EpisodeController::class, 'like']);
-    //     });
+
+    Route::prefix('episodes')->group(function () {
+        // Route::get('seach-episodes', [EpisodeController::class, 'seachEpisodes']);
+        Route::prefix('{episode}')->group(function () {
+            Route::get('/', [EpisodeController::class, 'getDetailed']);
+            Route::get('like', [EpisodeController::class, 'like']);
+        });
+    });
 });
