@@ -39,6 +39,31 @@ class Episode extends Model
         'category_id' => 'integer',
     ];
 
+    public function scopeFilterHasTopics($query, string $topics)
+    {
+        $topicsArray = explode(',', $topics);
+
+        return $query->whereHas('topics', function ($query) use ($topicsArray) {
+            $query->whereIn('id', $topicsArray);
+        });
+    }
+
+    public function scopeFilterHasGuests($query, string $guests)
+    {
+        $guestsArray = explode(',', $guests);
+
+        return $query->whereHas('guests', function ($query) use ($guestsArray) {
+            $query->whereIn('id', $guestsArray);
+        });
+    }
+
+    public function scopeLanguage($query, string $language)
+    {
+        return $query->whereHas('podcast', function ($query) use ($language) {
+            $query->where('language', $language);
+        });
+    }
+
     public function podcast(): BelongsTo
     {
         return $this->belongsTo(Podcast::class);

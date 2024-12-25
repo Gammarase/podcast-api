@@ -35,6 +35,18 @@ class PodcastService extends AbstractService
             ->paginate(20);
     }
 
+    public function getNew(): LengthAwarePaginator
+    {
+        $user = auth()->user();
+
+        return Podcast::with('admin')
+            ->withExists(['savedByUsers as is_saved' => function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            }])
+            ->orderBy('created_at', 'desc')
+            ->paginate(20);
+    }
+
     public function getDetailed(Podcast $podcast): Podcast
     {
         $user = auth()->user();

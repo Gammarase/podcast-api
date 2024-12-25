@@ -26,7 +26,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: buster08@example.com
+        example: fabshire@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -36,15 +36,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '@_f=1)_'
+        example: 'E?as94%?H9~!![jq'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: buster08@example.com
-      password: '@_f=1)_'
+      email: fabshire@example.net
+      password: 'E?as94%?H9~!![jq'
     fileParameters: []
     responses: []
     responseFields: []
@@ -78,7 +78,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: lavern.pacocha@example.org
+        example: lukas.stoltenberg@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,7 +88,7 @@ endpoints:
         name: username
         description: ''
         required: true
-        example: nihil
+        example: quae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,16 +98,16 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: '3\Z_eRNqM73Rn")Ro$&U'
+        example: $O^uI>~i
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: lavern.pacocha@example.org
-      username: nihil
-      password: '3\Z_eRNqM73Rn")Ro$&U'
+      email: lukas.stoltenberg@example.org
+      username: quae
+      password: $O^uI>~i
     fileParameters: []
     responses: []
     responseFields: []
@@ -180,7 +180,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: jack.white@example.org
+        example: janet33@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -190,7 +190,7 @@ endpoints:
         name: username
         description: ''
         required: false
-        example: iste
+        example: laboriosam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -200,7 +200,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: false
-        example: 'eC@}\|t&)'
+        example: ')`V1n#lR%*%l*R^:$?f'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -217,9 +217,9 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: jack.white@example.org
-      username: iste
-      password: 'eC@}\|t&)'
+      email: janet33@example.com
+      username: laboriosam
+      password: ')`V1n#lR%*%l*R^:$?f'
     fileParameters:
       image: null
     responses: []
@@ -254,7 +254,7 @@ endpoints:
         name: cvv
         description: 'Must be at least 3 characters. Must not be greater than 3 characters.'
         required: true
-        example: bji
+        example: omt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -264,7 +264,7 @@ endpoints:
         name: card_number
         description: 'Must be at least 16 characters. Must not be greater than 16 characters.'
         required: true
-        example: forykjmda
+        example: ntgfimnuntjogx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -284,17 +284,17 @@ endpoints:
         name: card_holder
         description: ''
         required: true
-        example: quia
+        example: pariatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      cvv: bji
-      card_number: forykjmda
+      cvv: omt
+      card_number: ntgfimnuntjogx
       expiration_date: 12/24
-      card_holder: quia
+      card_holder: pariatur
     fileParameters: []
     responses: []
     responseFields: []
@@ -346,6 +346,45 @@ endpoints:
     httpMethods:
       - GET
     uri: api/podcasts/get-popular
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/podcasts/get-new
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -462,6 +501,248 @@ endpoints:
       podcast_id: 1
     queryParameters: []
     cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/topics
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/categories
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/guests
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/episodes/search
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number.'
+        required: false
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[search]':
+        name: 'filter[search]'
+        description: 'Optional Search by a keyword in the title.'
+        required: false
+        example: '"exciting"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[category]':
+        name: 'filter[category]'
+        description: 'Optional Filter by category ID.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[topics]':
+        name: 'filter[topics]'
+        description: 'Optional Filter by one or more topic IDs (comma-separated).'
+        required: false
+        example: '"1,3,5"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[guests]':
+        name: 'filter[guests]'
+        description: 'Optional Filter by one or more guest IDs (comma-separated).'
+        required: false
+        example: '"4,7"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[language]':
+        name: 'filter[language]'
+        description: 'Optional Filter by language.'
+        required: false
+        example: '"en"'
+        type: string
+        enumValues:
+          - ua
+          - en
+          - es
+          - fr
+          - de
+          - it
+          - zh
+          - ja
+          - ko
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'Optional Sort by a specific field. Allowed values: "popularity", "-popularity", "duration", "-duration", "uploaded_at", "-uploaded_at".'
+        required: false
+        example: '"-popularity"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      page: 4
+      'filter[search]': '"exciting"'
+      'filter[category]': 2
+      'filter[topics]': '"1,3,5"'
+      'filter[guests]': '"4,7"'
+      'filter[language]': '"en"'
+      sort: '"-popularity"'
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []

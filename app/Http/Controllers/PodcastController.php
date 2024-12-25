@@ -30,6 +30,14 @@ class PodcastController extends Controller
         ));
     }
 
+    public function getNew(Request $request)
+    {
+        return AppResponse::success(new Pagination(
+            $this->podcastService->getNew(),
+            PodcastResource::class
+        ));
+    }
+
     public function getDetailed(Request $request, Podcast $podcast)
     {
         return AppResponse::success(
