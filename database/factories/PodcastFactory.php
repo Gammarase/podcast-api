@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\AdminRole;
 use App\Models\Admin;
 use App\Models\Category;
 use App\Models\Podcast;
@@ -30,7 +31,7 @@ class PodcastFactory extends Factory
             'image_url' => $this->storeRandomColorImage(),
             'language' => $this->faker->randomElement(['ua', 'en', 'es', 'fr', 'de', 'it', 'zh', 'ja', 'ko']),
             'featured' => $this->faker->boolean(),
-            'admin_id' => Admin::inRandomOrder()->first() ?? Admin::factory(),
+            'admin_id' => Admin::where('role', AdminRole::CONTENT_CREATOR)->inRandomOrder()->first() ?? Admin::factory(),
             'category_id' => Category::inRandomOrder()->first() ?? Category::factory(),
         ];
     }
