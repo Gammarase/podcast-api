@@ -35,7 +35,7 @@ class AuthService extends AbstractService
 
     public function getUser(User $user): User
     {
-        return $user->load('savedPodcasts', 'likedEpisodes');
+        return $user->load('savedPodcasts.admin', 'likedEpisodes.podcast.admin');
     }
 
     public function updateUser(AuthUpdateUserRequest $request): User
