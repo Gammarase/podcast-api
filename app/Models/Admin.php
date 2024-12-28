@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Enums\AdminRole;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
     use HasFactory;
 
@@ -19,6 +20,7 @@ class Admin extends Model
         'email',
         'name',
         'password',
+        'role',
     ];
 
     /**
@@ -37,6 +39,7 @@ class Admin extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'role' => AdminRole::class,
     ];
 
     public function podcasts(): HasMany

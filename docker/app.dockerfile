@@ -1,14 +1,17 @@
 FROM php:8.3.13-fpm
 
-RUN apt-get update && apt-get install -y  \
+RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     git \
     libjpeg-dev \
     libpng-dev \
     libwebp-dev \
+    libicu-dev \
+    libzip-dev \
+    unzip \
     --no-install-recommends \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql -j$(nproc) gd
+    && docker-php-ext-install -j$(nproc) gd pdo_mysql intl zip
 
 
 COPY ./ /var/www/html/

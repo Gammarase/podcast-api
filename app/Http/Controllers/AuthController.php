@@ -6,6 +6,7 @@ use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthPurchasePremiumRequest;
 use App\Http\Requests\AuthRegisterRequest;
 use App\Http\Requests\AuthUpdateUserRequest;
+use App\Http\Requests\ContentCreatorRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Response as AppResponse;
 use App\Services\AuthService;
@@ -54,5 +55,12 @@ class AuthController extends Controller
         $this->authService->purchasePremium($request);
 
         return AppResponse::success(['message' => 'Premium purchased successfully']);
+    }
+
+    public function request(ContentCreatorRequest $request): JsonResponse
+    {
+        $this->authService->request($request->validated());
+
+        return AppResponse::success(['message' => 'Request successful']);
     }
 }
