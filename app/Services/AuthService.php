@@ -9,6 +9,7 @@ use App\Http\Requests\AuthUpdateUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class AuthService extends AbstractService
 {
@@ -46,7 +47,7 @@ class AuthService extends AbstractService
 
         if (isset($data['image'])) {
             $user->image_url ? Storage::disk('public')->delete($user->image_url) : null;
-            $data['image_url'] = $data['image']->storeAs('images', "photo_{$user->id}.".$data['image']->extension(), 'public');
+            $data['image_url'] = $data['image']->storeAs('images', 'photo_'.Str::uuid()->toString().'.'.$data['image']->extension(), 'public');
         }
 
         $user->update($data);
