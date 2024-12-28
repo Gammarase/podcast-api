@@ -55,7 +55,7 @@ class EpisodeResource extends Resource
                     ->label('Audio File')
                     ->disk('public')
                     ->directory('audio')
-                    ->acceptedFileTypes(['audio/mp3'])
+                    ->acceptedFileTypes(['audio/mpeg'])
                     ->required(),
                 Select::make('podcast_id')
                     ->label('Podcast')

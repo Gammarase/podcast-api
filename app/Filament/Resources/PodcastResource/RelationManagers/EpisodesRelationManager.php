@@ -43,7 +43,7 @@ class EpisodesRelationManager extends RelationManager
                     ->label('Audio File')
                     ->disk('public')
                     ->directory('audio')
-                    ->acceptedFileTypes(['audio/mp3'])
+                    ->acceptedFileTypes(['audio/mpeg'])
                     ->required(),
                 Select::make('category_id')
                     ->label('Category')

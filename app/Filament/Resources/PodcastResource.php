@@ -62,7 +62,8 @@ class PodcastResource extends Resource
                     ->default(false)
                     ->disabled(function () {
                         return auth()->user()->role !== AdminRole::ADMIN;
-                    }),
+                    })
+                    ->dehydrated(true),
                 Select::make('category_id')
                     ->label('Category')
                     ->relationship('category', 'name')
