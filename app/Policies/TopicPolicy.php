@@ -12,7 +12,7 @@ class TopicPolicy extends AbstractPolicy
      */
     public function viewAny(Authenticatable $user): bool
     {
-        return true;
+        return $this->authorizedAuthor($user);
     }
 
     /**
@@ -20,7 +20,7 @@ class TopicPolicy extends AbstractPolicy
      */
     public function view(Authenticatable $user, Topic $topic): bool
     {
-        return true;
+        return $this->authorizedAuthor($user);
     }
 
     /**

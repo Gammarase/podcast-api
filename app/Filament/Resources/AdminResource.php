@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Enums\AdminRole;
 use App\Filament\Resources\AdminResource\Pages;
+use App\Filament\Resources\AdminResource\RelationManagers\PodcastsRelationManager;
 use App\Models\Admin;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -35,15 +36,20 @@ class AdminResource extends Resource
                     ->placeholder('example@mail.com'),
                 TextInput::make('password')
                     ->label('Password')
-                    ->required()
+                    ->required(fn () => $form->getOperation() === 'create')
                     ->placeholder('********')
                     ->password()
                     ->autocomplete('new-password')
-                    ->visibleOn(['create']),
+                    ->visibleOn(['create', 'edit'])
+                    ->dehydrateStateUsing(fn ($state) => bcrypt($state))
+                    ->dehydrated(fn ($state) => filled($state)),
                 Select::make('role')
                     ->label('Role')
                     ->options(AdminRole::getOptions())
-                    ->required(),
+                    ->required()
+                    ->disabled(function () {
+                        return auth()->user()->role !== AdminRole::ADMIN;
+                    }),
             ]);
     }
 
@@ -89,7 +95,7 @@ class AdminResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PodcastsRelationManager::class,
         ];
     }
 

@@ -16,6 +16,15 @@ class AbstractPolicy
         return false;
     }
 
+    protected function authorizedAuthor(Authenticatable $user): bool
+    {
+        if ($user instanceof \App\Models\Admin) {
+            return $user->role !== AdminRole::REQUESTER;
+        }
+
+        return false;
+    }
+
     protected function isContentCreator(Authenticatable $user): bool
     {
         if ($user instanceof \App\Models\Admin) {

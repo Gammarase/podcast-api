@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\AdminRole;
 use App\Filament\Resources\EpisodeResource\Pages;
 use App\Models\Episode;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -18,7 +20,12 @@ class EpisodeResource extends Resource
 {
     protected static ?string $model = Episode::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-musical-note';
+
+    public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
+    {
+        return parent::getEloquentQuery()->with(['podcast']);
+    }
 
     public static function form(Form $form): Form
     {
@@ -50,6 +57,30 @@ class EpisodeResource extends Resource
                     ->directory('audio')
                     ->acceptedFileTypes(['audio/mp3'])
                     ->required(),
+                Select::make('podcast_id')
+                    ->label('Podcast')
+                    ->relationship('podcast', 'title', function ($query) {
+                        match (auth()->user()->role) {
+                            AdminRole::ADMIN => $query,
+                            default => $query->where('admin_id', auth()->id()),
+                        };
+                    })
+                    ->searchable()
+                    ->required(),
+                Select::make('category_id')
+                    ->label('Category')
+                    ->relationship('category', 'name')
+                    ->required(),
+                Select::make('guests')
+                    ->label('Guests')
+                    ->multiple()
+                    ->relationship('guests', 'name')
+                    ->nullable(),
+                Select::make('topics')
+                    ->label('Topics')
+                    ->multiple()
+                    ->relationship('topics', 'name')
+                    ->nullable(),
             ]);
     }
 
@@ -92,7 +123,15 @@ class EpisodeResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->modifyQueryUsing(function ($query) {
+                match (auth()->user()->role) {
+                    AdminRole::ADMIN => $query,
+                    default => $query->whereHas('podcast', function ($query) {
+                        $query->where('admin_id', auth()->id());
+                    }),
+                };
+            });
     }
 
     public static function getRelations(): array

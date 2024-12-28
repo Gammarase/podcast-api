@@ -12,7 +12,7 @@ class EpisodePolicy extends AbstractPolicy
      */
     public function viewAny(Authenticatable $user): bool
     {
-        return true;
+        return $this->authorizedAuthor($user);
     }
 
     /**
@@ -20,7 +20,7 @@ class EpisodePolicy extends AbstractPolicy
      */
     public function view(Authenticatable $user, Episode $episode): bool
     {
-        return $this->isAdmin($user) || ($episode->relationLoaded('podcsat') && $episode->podcast->admin_id === $user->id);
+        return $this->isAdmin($user) || ($episode->relationLoaded('podcast') && $episode->podcast->admin_id === $user->id);
     }
 
     /**
@@ -28,7 +28,7 @@ class EpisodePolicy extends AbstractPolicy
      */
     public function create(Authenticatable $user): bool
     {
-        return true;
+        return $this->authorizedAuthor($user);
     }
 
     /**
@@ -36,7 +36,7 @@ class EpisodePolicy extends AbstractPolicy
      */
     public function update(Authenticatable $user, Episode $episode): bool
     {
-        return $this->isAdmin($user) || ($episode->relationLoaded('podcsat') && $episode->podcast->admin_id === $user->id);
+        return $this->isAdmin($user) || ($episode->relationLoaded('podcast') && $episode->podcast->admin_id === $user->id);
     }
 
     /**
@@ -44,6 +44,6 @@ class EpisodePolicy extends AbstractPolicy
      */
     public function delete(Authenticatable $user, Episode $episode): bool
     {
-        return $this->isAdmin($user) || ($episode->relationLoaded('podcsat') && $episode->podcast->admin_id === $user->id);
+        return $this->isAdmin($user) || ($episode->relationLoaded('podcast') && $episode->podcast->admin_id === $user->id);
     }
 }

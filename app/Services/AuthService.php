@@ -2,10 +2,12 @@
 
 namespace App\Services;
 
+use App\Enums\AdminRole;
 use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthPurchasePremiumRequest;
 use App\Http\Requests\AuthRegisterRequest;
 use App\Http\Requests\AuthUpdateUserRequest;
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -61,5 +63,14 @@ class AuthService extends AbstractService
         $user->update(['premium_until' => now()->addMonth()]);
 
         return true;
+    }
+
+    public function request(array $data)
+    {
+        $data['password'] = bcrypt($data['password']);
+        Admin::create([
+            ...$data,
+            'role' => AdminRole::REQUESTER,
+        ]);
     }
 }

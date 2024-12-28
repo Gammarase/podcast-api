@@ -12,7 +12,7 @@ class PodcastPolicy extends AbstractPolicy
      */
     public function viewAny(Authenticatable $user): bool
     {
-        return true;
+        return $this->authorizedAuthor($user);
     }
 
     /**
@@ -28,7 +28,7 @@ class PodcastPolicy extends AbstractPolicy
      */
     public function create(Authenticatable $user): bool
     {
-        return true;
+        return $this->authorizedAuthor($user);
     }
 
     /**

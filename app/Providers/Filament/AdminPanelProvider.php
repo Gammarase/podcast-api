@@ -40,6 +40,7 @@ class AdminPanelProvider extends PanelProvider
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
             ])
+            ->brandName('Podcasts')
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,

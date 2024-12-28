@@ -2,7 +2,9 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\AdminRole;
 use App\Filament\Resources\PodcastResource\Pages;
+use App\Filament\Resources\PodcastResource\RelationManagers\EpisodesRelationManager;
 use App\Models\Podcast;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
@@ -22,7 +24,7 @@ class PodcastResource extends Resource
 {
     protected static ?string $model = Podcast::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-microphone';
 
     public static function form(Form $form): Form
     {
@@ -56,7 +58,29 @@ class PodcastResource extends Resource
                             'ko' => 'Korean',
                         ]),
                 Checkbox::make('featured')
-                    ->label('Featured'),
+                    ->label('Featured')
+                    ->default(false)
+                    ->disabled(function () {
+                        return auth()->user()->role !== AdminRole::ADMIN;
+                    }),
+                Select::make('category_id')
+                    ->label('Category')
+                    ->relationship('category', 'name')
+                    ->required(),
+                Select::make('admin_id')
+                    ->label('Author')
+                    ->relationship('admin', 'name', function ($query) {
+                        match (auth()->user()->role) {
+                            AdminRole::ADMIN => $query,
+                            default => $query->where('id', auth()->id()),
+                        };
+                    })
+                    ->required(),
+                Select::make('topics')
+                    ->label('Topics')
+                    ->multiple()
+                    ->relationship('topics', 'name')
+                    ->nullable(),
             ]);
     }
 
@@ -101,6 +125,9 @@ class PodcastResource extends Resource
                 CheckboxColumn::make('featured')
                     ->label('Featured')
                     ->sortable()
+                    ->disabled(function () {
+                        return auth()->user()->role !== AdminRole::ADMIN;
+                    })
                     ->searchable(),
             ])
             ->filters([
@@ -114,13 +141,19 @@ class PodcastResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->modifyQueryUsing(function ($query) {
+                match (auth()->user()->role) {
+                    AdminRole::ADMIN => $query,
+                    default => $query->where('admin_id', auth()->id()),
+                };
+            });
     }
 
     public static function getRelations(): array
     {
         return [
-            //
+            EpisodesRelationManager::class,
         ];
     }
 
