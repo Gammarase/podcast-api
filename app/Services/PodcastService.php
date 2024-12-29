@@ -51,7 +51,14 @@ class PodcastService extends AbstractService
     {
         $user = auth()->user();
 
-        return $podcast->load('episodes', 'topics', 'category', 'admin')
+        return $podcast->load([
+            'episodes' => function ($query) {
+                $query->orderBy('episode_number');
+            },
+            'topics',
+            'category',
+            'admin',
+        ])
             ->loadExists(['savedByUsers as is_saved' => function ($query) use ($user) {
                 $query->where('user_id', $user->id);
             }]);
